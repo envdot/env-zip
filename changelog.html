@@ -164,7 +164,7 @@
     .changelog {
       position: relative;
       z-index: 10;
-      padding-bottom: 80px;
+      padding-bottom: 128px;
     }
 
     .changelog-entry {
@@ -182,7 +182,7 @@
       content: '';
       position: absolute;
       left: -5px;
-      top: 0;
+      top: 11px;
       width: 9px;
       height: 9px;
       background: var(--bg);
@@ -246,6 +246,55 @@
       position: absolute;
       left: 0;
       color: var(--text-muted);
+    }
+
+    .easter-egg {
+      color: #555555;
+      font-size: 0.9375rem;
+    }
+
+    .easter-egg-entry {
+      border-left-color: #1d1d1d;
+    }
+
+    .easter-egg-entry::before {
+      content: '🥚';
+      left: 0;
+      top: 2px;
+      width: auto;
+      height: auto;
+      background: none;
+      border: 0;
+      border-radius: 0;
+      font-size: 1rem;
+      line-height: 1.6;
+      transform: translateX(-50%);
+    }
+
+    .easter-egg-entry .changelog-version,
+    .easter-egg-entry .changelog-date {
+      color: #555555;
+    }
+
+    .easter-egg-entry .changelog-content {
+      margin-top: 16px;
+    }
+
+    .easter-egg-title {
+      font-family: var(--mono);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .easter-egg a {
+      color: #444444;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .easter-egg a:hover {
+      color: #666666;
     }
 
     footer {
@@ -327,6 +376,18 @@
 
   <section class="changelog">
     <div class="container">
+      <article class="changelog-entry easter-egg-entry">
+        <div class="changelog-version">
+          <span class="easter-egg-title">hungryfoolish.patch</span>
+        </div>
+        <div class="changelog-content">
+          <h3>Added</h3>
+          <p class="easter-egg">
+            In February 2002, the fate of the Blender software company, NaN, became evident as it faced imminent closure in March. Nevertheless, one more release was pushed out, Blender 2.25. As a sort of <a href="https://en.wikipedia.org/wiki/Easter_egg_(media)" target="_blank" rel="noopener noreferrer">Easter egg</a> and last personal tag, the artists and developers decided to add a 3D model of a chimpanzee head (called a “monkey” in the software). It was created by Willem-Paul van Overbruggen (SLiD3), who named it Suzanne after the orangutan in the <a href="https://en.wikipedia.org/wiki/Kevin_Smith" target="_blank" rel="noopener noreferrer">Kevin Smith</a> film <a href="https://en.wikipedia.org/wiki/Jay_and_Silent_Bob_Strike_Back" target="_blank" rel="noopener noreferrer"><em>Jay and Silent Bob Strike Back</em></a>.
+          </p>
+        </div>
+      </article>
+
       <article class="changelog-entry">
         <div class="changelog-version">
           v0.1.2
@@ -388,6 +449,7 @@
           </ul>
         </div>
       </article>
+
     </div>
   </section>
 
@@ -403,5 +465,6 @@
       </ul>
     </div>
   </footer>
+
 </body>
 </html>
