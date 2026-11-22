@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    { "source": "/login", "destination": "https://dist-gamma-liart-95.vercel.app/" },
+    { "source": "/signin", "destination": "https://dist-gamma-liart-95.vercel.app/" },
+    { "source": "/signup", "destination": "https://dist-gamma-liart-95.vercel.app/" },
+    { "source": "/assets/:path*", "destination": "https://dist-gamma-liart-95.vercel.app/assets/:path*" },
+    { "source": "/favicon.ico", "destination": "https://dist-gamma-liart-95.vercel.app/favicon.ico" }
+  ]
+}
